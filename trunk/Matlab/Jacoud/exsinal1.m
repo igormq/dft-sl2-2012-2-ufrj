@@ -15,9 +15,7 @@ end
 figure(1)
 plot(t,x)
 
-xshift=circshift(x',(N+1)/2);
-figure(2)
-plot(t,xshift)
+%xshift=circshift(x',(N+1)/2);
 
 
 
