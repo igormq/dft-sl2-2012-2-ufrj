@@ -1,0 +1,148 @@
+\documentclass[12pt]{article}
+
+\usepackage{dftsl2}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\numberwithin{equation}{section}
+\usepackage{enumerate}
+
+\usepackage{graphicx,url}
+
+%\usepackage[brazil]{babel}   
+\usepackage[latin1]{inputenc}  
+
+     
+\sloppy
+
+\title{Sistemas Lineares II}
+
+\author{Igor Macedo Quintanilha\inst{1}, Roberto de Moura Estevão Filho\inst{1}}
+
+
+\address{Departamento de Eng. Elet. e de Comp. - Universidade Federal do Rio de Janeiro\\
+  Rio de Janeiro - RJ - Brazil
+  \email{\{igormq, robertomest\}@poli.ufrj.br}
+}
+
+\begin{document} 
+
+\maketitle
+
+\begin{resumo} 
+Como relacionar a \textbf{DFT} de um conjunto de N amostras de um sinal com a transformada de Fourier do sinal?
+\end{resumo}
+
+
+\section{Notação}
+\begin{itemize}
+	\item Geral:
+	\begin{itemize}
+	\item $x(t)$ é o sinal contínuo
+		\item $X(j\omega)$ é a \textbf{FT}
+		\item $\omega(t) = 
+			\begin{cases}
+			    1,& -\frac{T_{0}}{2}\leq t \leq\frac{T_{0}}{2}\\0,& \mbox{caso contrário} 
+		 	\end{cases}$
+	\end{itemize}
+	\item Janela de Observação:
+	\begin{itemize}
+		\item $W(j\omega)$ é a \textbf{FT} janela (sinc)
+		\item $y(t) = x(t)w(t)$ é a porção de interesse
+		\item $Y(j\omega) = \mathcal{F}\{y(t)\}$
+		\item $p(t) = \sum_{l=-\infty}^{\infty}\delta(t-lh)$ é o trem de impulsos
+		\item $y^\star = y(t)p(t)$ é o trem de impulsos modulados
+		\item $y[n]$ são as amostras correspondentes
+	\end{itemize}
+\end{itemize}
+
+
+\section{Passo 1 - Multiplicação pela janela}
+\begin{equation}
+Y(j\omega) = X(j\omega) \ast W(j\omega)
+\end{equation}
+\section{Passo 2 - Amostragem}
+\begin{equation}
+Y^\ast(j\omega) = \frac{1}{h} \sum_{k=-\infty}^{\infty} y(j\omega - jk\omega_0),\quad \omega_0 = \frac{2\pi}{h}
+\end{equation}
+\section{Passo 3 - DTFT de y[n] e a transformada de Fourier de $y[n]$}
+\begin{equation}
+DTFT\{y[n]\} = FT\{Y^\ast(j\omega)\}|_{\omega = \frac{\Omega}{h}}, \quad t=nh
+\end{equation}
+\section{Passo 4 - DFT do y[n] com a DTFT de y[n]}
+\begin{equation}
+\left.DFT\{y[n]\} = DTFT\{y[n]\}\right|_{\Omega = \frac{2\pi}{N}k}
+\end{equation}
+\section{Passo 5}
+\begin{center}
+Relacionar a $DFT\{y[n]\}$ com $X(jw)$
+\end{center}
+\section{Hipóteses}
+\begin{itemize}
+\item A janela é muito grande (infinita)
+\item O sinal $x(t)$ possui banda limitada
+\item O sinal $x(t)$ foi amostrado a uma taxa suficientemente alta para evitar aliasing
+\end{itemize}
+\begin{equation}
+DFT\{y[n]\} = \left.\frac{1}{h}\right|_{\omega = \frac{n}{Nh}}
+\end{equation}
+\section{Nova notação}
+\begin{itemize}
+\item $h$ é o período de amostragem
+\item $N$ é o número de pontos da janela
+\item $T_0 = (N-1)h$ é a janela de observação (tamanho)
+\item $N\to\infty$: a resolução (frequência) é aproximadamente $\frac{1}{T_0}$
+\end{itemize}
+\section{Tarefa}
+\begin{equation}
+x(t) = 
+	\begin{cases}
+\frac{A}{a}t + A,& -a\leq t \leq 0\\
+-\frac{A}{a}t + A,& 0\leq t \leq a\\
+0,& \mbox{caso contrário} 
+ 	\end{cases}
+\end{equation}
+\begin{itemize}
+\item $A = 1$
+\item $a = 10^{-3}$
+\end{itemize}
+\begin{enumerate}[(a)]
+\item Mostre que:
+\begin{equation}
+X(f) = \frac{2A}{a(2\pi f)^2}(1 - cos(2\pi fa))
+\end{equation}
+\item Crie um script que implementa $X(f)$
+\item Desloque circularmente a parte negativa para usar o comando \textbf{ \textit{fft()}} do matlab
+\item Utilize a propriedade do deslocamento circular da DFT para determinar a DFT do sinal deslocado\\
+\textbf{OBS.:} Propriedade do deslocamento:
+Seja $x_0$ o sinal e $X_{0shift}$ o sinal deslocado de m amostras circularmente:
+\begin{equation}
+DFT\{X_0shift[n]\} = DFT\{x_0[n]\}e^{j\frac{2\pi mk}{N}}
+\end{equation}
+\item Desloque circularmente a DFT no sentido reverso para obter a DFT do sinal original
+\item Defina um vetor de frequências "adequado"
+\item Construir gráficos de:
+\begin{itemize}
+\item Sinal no tempo;
+\item $\|DFT\|$;
+\item $\angle DFT$.
+\end{itemize}
+\item Comparar no mesmo gráfico a DFT e FT analítica
+\end{enumerate}
+
+\subsection{Casos}
+$N = 512$ e resolução $= 100Hz$\\
+$N = 2^{14}$ e resolução $= 20Hz$
+\subsection{Sinal 2}
+\begin{equation}
+x(t) = 2sinc(2t) + 0.2sinc(0.2t)
+\end{equation}
+\begin{enumerate}[(a)]
+	\item Obtenha uma expressão para $X(f)$ e repita o exemplo anterior para:
+		\begin{itemize}
+			\item $N= 64,\quad h = 0.5$;
+			\item $N=64,\quad h = 0.05$;
+			\item $N=1024,\quad h = 0.4$.
+		\end{itemize}
+\end{enumerate}
+
+\end{document}
