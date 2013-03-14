@@ -1,4 +1,4 @@
-function transf = X(A,a,f)
+function transf = X(f,a,A)
 %A - amplitude
 %a - Período
 %f - frequencia
