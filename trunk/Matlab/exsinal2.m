@@ -8,7 +8,7 @@ Fs2 = 1/h2;
 Fs3 = 1/h3;
 % Comprimento do sinal
 N = 64;
-N2 = 512;
+N2 = 64;
 N3 = 1024;
 % Janela temporal
 T0 = (N-1)*h;
@@ -55,7 +55,7 @@ DFT2=fft(x2shift);
 DTFS2=DFT2/N2;
 figure;
 plot(f2,2*abs(DTFS2(1:N2/2+1)));
-title('Espectro de meia-banda Fs = 200Hz, N = 64');
+title('Espectro de meia-banda Fs = 20Hz, N = 64');
 xlabel('(Hz)');
 ylabel('modulo');
 
@@ -71,30 +71,27 @@ ylabel('modulo');
 %DFT*h = FT;
 FT = X2(f);
 figure;
-plot(f,FT);
+plot(f,FT,'r');
 hold on;
-plot(f,abs(h*DFT(1:N/2+1)),'r.');
+plot(f,abs(h*DFT(1:N/2+1)));
 title('FT e DFT Fs = 2Hz, N = 64');
 xlabel('Hz');
 ylabel('modulo');
-legend('FT', 'DFT');
 
 FT2 = X2(f2);
 figure;
-plot(f2,FT2);
+plot(f2,FT2,'r');
 hold on;
-plot(f2,abs(h2*DFT2(1:N2/2+1)),'r.');
-title('FT e DFT Fs = 200Hz, N = 64');
+plot(f2,abs(h2*DFT2(1:N2/2+1)));
+title('FT e DFT Fs = 20Hz, N = 64');
 xlabel('Hz');
 ylabel('modulo');
-legend('FT', 'DFT');
 
 FT3 = X2(f3);
 figure;
-plot(f3,FT3);
+plot(f3,FT3,'r');
 hold on;
-plot(f3,abs(h3*DFT3(1:N3/2+1)),'r.');
+plot(f3,abs(h3*DFT3(1:N3/2+1)));
 title('FT e DFT Fs = 2.5Hz, N = 1024');
 xlabel('Hz');
 ylabel('modulo');
-legend('FT', 'DFT');
