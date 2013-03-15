@@ -1,9 +1,9 @@
-This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=pdflatex 2012.11.22)  27 FEB 2013 17:18
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=pdflatex 2012.11.22)  14 MAR 2013 22:08
 entering extended mode
 **dftsl2.tex
 
-("D:\SkyDrive\Documentos\Faculdade\5o Periodo\Sistemas Lineares II\Trabalhos\DF
-T\dft\dftsl2.tex"
+("D:\Google Drive\Faculdade\5o Periodo\Sistemas Lineares II\Trabalhos\DFT\dft-s
+l2-2012-2-ufrj\Latex\dftsl2.tex"
 LaTeX2e <2011/06/27>
 Babel <v3.8m> and hyphenation patterns for english, afrikaans, ancientgreek, ar
 abic, armenian, assamese, basque, bengali, bokmal, bulgarian, catalan, coptic, 
@@ -32,8 +32,8 @@ File: size12.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
 \belowcaptionskip=\skip42
 \bibindent=\dimen102
 )
-("D:\SkyDrive\Documentos\Faculdade\5o Periodo\Sistemas Lineares II\Trabalhos\DF
-T\dft\dftsl2.sty"
+("D:\Google Drive\Faculdade\5o Periodo\Sistemas Lineares II\Trabalhos\DFT\dft-s
+l2-2012-2-ufrj\Latex\dftsl2.sty"
 
 LaTeX Warning: You have requested package `dftsl2',
                but the package provides `sbc-template'.
@@ -71,8 +71,8 @@ Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
 \Gm@dimlist=\toks15
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\geometry\geometry.cfg"))
-("D:\SkyDrive\Documentos\Faculdade\5o Periodo\Sistemas Lineares II\Trabalhos\DF
-T\dft\caption2.sty"
+("D:\Google Drive\Faculdade\5o Periodo\Sistemas Lineares II\Trabalhos\DFT\dft-s
+l2-2012-2-ufrj\Latex\caption2.sty"
 Package: caption2 2002/08/03 v2.1 Customising captions (AS)
 \captionmargin=\dimen111
 \captionwidth=\dimen112
@@ -207,8 +207,8 @@ Package: inputenc 2008/03/30 v1.1d Input encoding file
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\latin1.def"
 File: latin1.def 2008/03/30 v1.1d Input encoding file
 ))
-("D:\SkyDrive\Documentos\Faculdade\5o Periodo\Sistemas Lineares II\Trabalhos\DF
-T\dft\dftsl2.aux")
+("D:\Google Drive\Faculdade\5o Periodo\Sistemas Lineares II\Trabalhos\DFT\dft-s
+l2-2012-2-ufrj\Latex\dftsl2.aux")
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 26.
 LaTeX Font Info:    ... okay on input line 26.
 LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 26.
@@ -287,8 +287,11 @@ LaTeX Font Info:    Try loading font information for U+msb on input line 28.
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsfonts\umsb.fd"
 File: umsb.fd 2009/06/22 v3.00 AMS symbols B
 )
-LaTeX Font Info:    Try loading font information for OT1+pcr on input line 28.
+Overfull \hbox (72.75893pt too wide) in paragraph at lines 28--28
+ [][] 
+ []
 
+LaTeX Font Info:    Try loading font information for OT1+pcr on input line 28.
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\psnfss\ot1pcr.fd"
 File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
 )
@@ -339,34 +342,19 @@ LaTeX Font Warning: Font shape `OMS/cmsy/b/n' in size <13> not available
 LaTeX Font Warning: Font shape `OMS/cmsy/b/n' in size <6.5> not available
 (Font)              size <6> substituted on input line 109.
 
-[2]
-
-LaTeX Warning: Citation `knuth:84' on page 3 undefined on input line 183.
-
-
-LaTeX Warning: Citation `boulic:91' on page 3 undefined on input line 184.
-
-
-LaTeX Warning: Citation `smith:99' on page 3 undefined on input line 184.
-
-[3]
-("D:\SkyDrive\Documentos\Faculdade\5o Periodo\Sistemas Lineares II\Trabalhos\DF
-T\dft\dftsl2.bbl") [4]
-("D:\SkyDrive\Documentos\Faculdade\5o Periodo\Sistemas Lineares II\Trabalhos\DF
-T\dft\dftsl2.aux")
+[2] [3] [4]
+("D:\Google Drive\Faculdade\5o Periodo\Sistemas Lineares II\Trabalhos\DFT\dft-s
+l2-2012-2-ufrj\Latex\dftsl2.aux")
 
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 1.0pt have occurred.
 
-
-LaTeX Warning: There were undefined references.
-
  ) 
 Here is how much of TeX's memory you used:
- 3226 strings out of 494045
- 42935 string characters out of 3145971
- 107140 words of memory out of 3000000
- 6454 multiletter control sequences out of 15000+200000
+ 3221 strings out of 494045
+ 42890 string characters out of 3145971
+ 107200 words of memory out of 3000000
+ 6452 multiletter control sequences out of 15000+200000
  24774 words of font info for 67 fonts, out of 3000000 for 9000
  715 hyphenation exceptions out of 8191
  30i,11n,32p,234b,317s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -388,7 +376,7 @@ nts/type1/urw/courier/ucrr8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1
 /urw/times/utmb8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/times/
 utmbi8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/times/utmr8a.pfb
 ><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/times/utmri8a.pfb>
-Output written on dftsl2.pdf (4 pages, 188133 bytes).
+Output written on dftsl2.pdf (4 pages, 188274 bytes).
 PDF statistics:
  88 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)

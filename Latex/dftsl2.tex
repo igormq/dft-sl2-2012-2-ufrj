@@ -15,12 +15,12 @@
 
 \title{Sistemas Lineares II}
 
-\author{Igor Macedo Quintanilha\inst{1}, Roberto de Moura Estevão Filho\inst{1}}
+\author{Igor Macedo Quintanilha\inst{1}, Roberto de Moura Estevão Filho\inst{1}, Tiago Monnerat de Faria Lopes\inst{1}}
 
 
 \address{Departamento de Eng. Elet. e de Comp. - Universidade Federal do Rio de Janeiro\\
   Rio de Janeiro - RJ - Brazil
-  \email{\{igormq, robertomest\}@poli.ufrj.br}
+  \email{\{igormq, robertomest, tiagomflopes\}@poli.ufrj.br}
 }
 
 \begin{document} 
@@ -167,21 +167,29 @@ Y(\mathrm{e}^{j\Omega}) = \sum_{n=0}^{N-1}y[n]\mathrm{e}^{-j\frac{2\pi k n}{N}} 
 
 \section{Relacionar a $DFT\{y[n]\}$ com a $FT\{x(t)\}$}
 
-All images and illustrations should be in black-and-white, or gray tones,
-excepting for the papers that will be electronically available (on CD-ROMs,
-internet, etc.). The image resolution on paper should be about 600 dpi for
-black-and-white images, and 150-300 dpi for grayscale images.  Do not include
-images with excessive resolution, as they may take hours to print, without any
-visible difference in the result. 
-
+Como hipótese, sugerindo a janela infinita, a tranformada seria:
+\begin{equation}
+W(j\omega) = \int_{-\infty}^{\infty}1\mathrm{e}^{-j\omega t} = \delta(\omega)
+\end{equation}
+Portanto, multiplicando pela janela, teremos o seguinte sinal:
+\begin{equation}
+Y(j\omega) = \int_{-\infty}^{\infty}X(\tau)\delta(j\omega - \tau)d\tau = X(j\omega)
+\end{equation}
+Utilizando as propriedades encontradas nos passos anteriores, temos:
+\begin{subequations}
+\begin{align}
+Y^\ast(j\omega) &= \frac{1}{h} \sum_{k=-\infty}^{\infty} x(j\omega - k\omega_0) = \left.Y(\mathrm{e}^{j\Omega}) \right|_{\omega = \frac{\Omega}{h}} \label{eqn:yastx}\\
+Y(\mathrm{e}^{j\Omega}) &= \left.Y[k]\right|_{\Omega = \frac{2\pi k}{N}}\\
+Y[k] &= \left. Y^\ast(j\omega) \right|_{w = \frac{2\pi k}{hN}}
+\end{align}
+\end{subequations}
+Como na equação \ref{eqn:yastx} o sinal $X(j\omega)$ é amostrado em infinitas amostras, podemos aproximar o somatório para o próprio sinal, portanto:
+\begin{equation}
+Y[k] = \left. \frac{1}{h}  X(j\omega)\right|_{\omega = \frac{2\pi k}{hN}}
+\end{equation}
 \section{Relacionar a $DFT\{y[n]\}$ com a $DTFS\{x[n]\}$}
 \begin{equation}
 \frac{1}{N}DFT\{x[n]\} = DTFS\{x[n]\}|_{\Omega_0 = \frac{2\pi}{N}}
 \end{equation}
-
-
-\section{Referências}
-\bibliographystyle{dftsl2}
-\bibliography{dftsl2}
 
 \end{document}

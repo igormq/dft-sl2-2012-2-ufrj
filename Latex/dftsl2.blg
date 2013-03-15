@@ -1,8 +1,5 @@
 This is BibTeX, Version 0.99dThe top-level auxiliary file: dftsl2.aux
-I couldn't open style file dftsl2.bst
----line 16 of file dftsl2.aux
- : \bibstyle{dftsl2
- :                 }
-I'm skipping whatever remains of this command
-I found no style file---while reading file dftsl2.aux
-(There were 2 error messages)
+I found no \citation commands---while reading file dftsl2.aux
+I found no \bibdata command---while reading file dftsl2.aux
+I found no \bibstyle command---while reading file dftsl2.aux
+(There were 3 error messages)

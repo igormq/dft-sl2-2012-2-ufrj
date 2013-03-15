@@ -16,12 +16,12 @@
 
 \title{Sistemas Lineares II}
 
-\author{Igor Macedo Quintanilha\inst{1}, Roberto de Moura Estevão Filho\inst{1}}
+\author{Igor Macedo Quintanilha\inst{1}, Roberto de Moura Estevão Filho\inst{1}, Tiago Monnerat de Faria Lopes\inst{1}}
 
 
 \address{Departamento de Eng. Elet. e de Comp. - Universidade Federal do Rio de Janeiro\\
   Rio de Janeiro - RJ - Brazil
-  \email{\{igormq, robertomest\}@poli.ufrj.br}
+  \email{\{igormq, robertomest, tiagomflopes\}@poli.ufrj.br}
 }
 
 \begin{document} 
@@ -56,23 +56,23 @@ Como relacionar a \textbf{DFT} de um conjunto de N amostras de um sinal com a tr
 \end{itemize}
 
 
-\section{Passo 1 - Multiplicação pela janela}
+\section*{Passo 1: Multiplicação pela janela}
 \begin{equation}
 Y(j\omega) = X(j\omega) \ast W(j\omega)
 \end{equation}
-\section{Passo 2 - Amostragem}
+\section*{Passo 2: Amostragem}
 \begin{equation}
 Y^\ast(j\omega) = \frac{1}{h} \sum_{k=-\infty}^{\infty} y(j\omega - jk\omega_0),\quad \omega_0 = \frac{2\pi}{h}
 \end{equation}
-\section{Passo 3 - DTFT de y[n] e a transformada de Fourier de $y[n]$}
+\section*{Passo 3}
 \begin{equation}
-DTFT\{y[n]\} = FT\{Y^\ast(j\omega)\}|_{\omega = \frac{\Omega}{h}}, \quad t=nh
+DTFT\{y[n]\} = \mathcal{F}\{Y^\ast(j\omega)\}|_{\omega = \frac{\Omega}{h}}, \quad t=nh
 \end{equation}
-\section{Passo 4 - DFT do y[n] com a DTFT de y[n]}
+\section*{Passo 4}
 \begin{equation}
 \left.DFT\{y[n]\} = DTFT\{y[n]\}\right|_{\Omega = \frac{2\pi}{N}k}
 \end{equation}
-\section{Passo 5}
+\section*{Passo 5}
 \begin{center}
 Relacionar a $DFT\{y[n]\}$ com $X(jw)$
 \end{center}
@@ -83,7 +83,7 @@ Relacionar a $DFT\{y[n]\}$ com $X(jw)$
 \item O sinal $x(t)$ foi amostrado a uma taxa suficientemente alta para evitar aliasing
 \end{itemize}
 \begin{equation}
-DFT\{y[n]\} = \left.\frac{1}{h}\right|_{\omega = \frac{n}{Nh}}
+DFT\{y[n]\} = \left.\frac{1}{h}X(j\omega)\right|_{\omega = \frac{n}{Nh}}
 \end{equation}
 \section{Nova notação}
 \begin{itemize}
