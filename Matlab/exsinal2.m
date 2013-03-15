@@ -8,7 +8,7 @@ Fs2 = 1/h2;
 Fs3 = 1/h3;
 % Comprimento do sinal
 N = 64;
-N2 = 64;
+N2 = 512;
 N3 = 1024;
 % Janela temporal
 T0 = (N-1)*h;
@@ -69,7 +69,7 @@ ylabel('modulo');
 
 %Comparação entre DFT e FT
 %DFT*h = FT;
-FT = X(f);
+FT = X2(f);
 figure;
 plot(f,FT,'r');
 hold on;
@@ -78,7 +78,7 @@ title('FT e DFT Fs = 2Hz, N = 64');
 xlabel('Hz');
 ylabel('modulo');
 
-FT2 = X(f2);
+FT2 = X2(f2);
 figure;
 plot(f2,FT2,'r');
 hold on;
@@ -87,7 +87,7 @@ title('FT e DFT Fs = 200Hz, N = 64');
 xlabel('Hz');
 ylabel('modulo');
 
-FT3 = X(f3);
+FT3 = X2(f3);
 figure;
 plot(f3,FT3,'r');
 hold on;
