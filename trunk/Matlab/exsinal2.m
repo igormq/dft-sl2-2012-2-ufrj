@@ -47,7 +47,7 @@ DFT=fft(xshift);
 DTFS=DFT/N;
 figure;
 plot(f,2*abs(DTFS(1:N/2+1)));
-title('Espectro de meia-banda Fs = 2Hz, N = 64');
+title(sprintf('Espectro de meia-banda Fs = %dHz, N = %d', Fs, N));
 xlabel('(Hz)');
 ylabel('modulo');
 
@@ -55,7 +55,7 @@ DFT2=fft(x2shift);
 DTFS2=DFT2/N2;
 figure;
 plot(f2,2*abs(DTFS2(1:N2/2+1)));
-title('Espectro de meia-banda Fs = 20Hz, N = 64');
+title(sprintf('Espectro de meia-banda Fs = %dHz, N = %d', Fs2, N2));
 xlabel('(Hz)');
 ylabel('modulo');
 
@@ -63,7 +63,7 @@ DFT3=fft(x3shift);
 DTFS3=DFT3/N3;
 figure;
 plot(f3,2*abs(DTFS3(1:N3/2+1)));
-title('Espectro de meia-banda Fs = 2.5Hz, N = 1024');
+title(sprintf('Espectro de meia-banda Fs = %dHz, N = %d', Fs3, N3));
 xlabel('(Hz)');
 ylabel('modulo');
 
@@ -74,7 +74,7 @@ figure;
 plot(f,FT,'r');
 hold on;
 plot(f,abs(h*DFT(1:N/2+1)));
-title('FT e DFT Fs = 2Hz, N = 64');
+title(sprintf('FT e DFT Fs = %dHz, N = %d', Fs, N));
 xlabel('Hz');
 ylabel('modulo');
 
@@ -82,8 +82,8 @@ FT2 = X2(f2);
 figure;
 plot(f2,FT2,'r');
 hold on;
-plot(f2,abs(h2*DFT2(1:N2/2+1)));
-title('FT e DFT Fs = 20Hz, N = 64');
+plot(f2,abs(h2*DFT2(1:N2/2+1)),'r.');
+title(sprintf('FT e DFT Fs = %dHz, N = %d', Fs2, N2));
 xlabel('Hz');
 ylabel('modulo');
 
@@ -92,6 +92,6 @@ figure;
 plot(f3,FT3,'r');
 hold on;
 plot(f3,abs(h3*DFT3(1:N3/2+1)));
-title('FT e DFT Fs = 2.5Hz, N = 1024');
+title(sprintf('FT e DFT Fs = %dHz, N = %d', Fs3, N3));
 xlabel('Hz');
 ylabel('modulo');
